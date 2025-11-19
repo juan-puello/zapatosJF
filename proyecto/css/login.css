@@ -1,0 +1,113 @@
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    font-family: 'Poppins', sans-serif;
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    margin: 10% auto;
+    padding: 2rem;
+    border: 1px solid #333;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 15px;
+    color: #f1f1f1;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    animation: modalAppear 0.3s ease-in-out;
+}
+
+@keyframes modalAppear {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-content h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #d4af37;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #121212;
+    color: #f1f1f1;
+    font-size: 1rem;
+}
+
+.modal-content input::placeholder {
+    color: #bbb;
+}
+
+.modal-content button {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 50px;
+    background-color: #d4af37;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: #a27c1a;
+}
+
+/* Botón cerrar */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #f1f1f1;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close:hover {
+    color: #d4af37;
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 95%;
+        margin: 20% auto;
+        padding: 1rem;
+    }
+
+    .modal-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .modal-content input {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .modal-content button {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .close {
+        font-size: 1.2rem;
+        top: 5px;
+        right: 10px;
+    }
+}
+

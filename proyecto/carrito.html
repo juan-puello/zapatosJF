@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - Zapatos JF</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/tienda.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Zapatos JF</div>
+            <ul class="nav-links">  
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#" id="btnLogin">Iniciar Sesión</a></li>
+                <li><a href="#" id="btnRegistro">Registrarte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Tu Carrito de Compras</h1>
+        <div class="carrito" id="carrito"></div>
+        <div class="total" id="total"></div>
+        <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+
+        <!-- Carrito flotante -->
+        <div id="carrito-flotante">
+            <i class="fas fa-shopping-cart"></i>
+            <div id="contador-carrito">0</div>
+            <div id="dropdown-carrito"></div>
+        </div>
+    </main>
+
+    <!-- Modal Login -->
+    <div id="modalLogin" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeLogin">&times;</span>
+        <h2>Iniciar Sesión</h2>
+        <input type="email" id="loginEmail" placeholder="Correo electrónico">
+        <input type="password" id="loginPass" placeholder="Contraseña">
+        <button id="loginSubmit">Iniciar Sesión</button>
+      </div>
+    </div>
+
+    <!-- Modal Registro -->
+    <div id="modalRegistro" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeRegistro">&times;</span>
+        <h2>Registrarse</h2>
+        <input type="text" id="regNombre" placeholder="Nombre completo">
+        <input type="email" id="regEmail" placeholder="Correo electrónico">
+        <input type="text" id="regCelular" placeholder="Número de celular">
+        <input type="password" id="regPass" placeholder="Contraseña">
+        <button id="registroSubmit">Registrarse</button>
+      </div>
+    </div>
+
+    <footer>
+        <p>&copy; Zapatos JF. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

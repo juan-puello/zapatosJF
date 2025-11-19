@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapatos JF</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/tienda.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Zapatos JF</div>
+            <ul class="nav-links">  
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#" id="btnLogin">Iniciar Sesión</a></li>
+                <li><a href="#" id="btnRegistro">Registrarte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Encuentra tu par ideal</h1>
+            <p>Los mejores zapatos y chancletas urbanos para cada estilo</p>
+            <button class="cta-button" onclick="location.href='#productos'">Ver productos</button>
+        </section>
+
+        <section id="productos">
+            <h2>Categorías</h2>
+            <div class="productos-grid">
+                <div class="producto-card" onclick="location.href='producto.html#chancletas'">
+                    <img src="img/chancletas.jpg" alt="Chancletas">
+                    <h3>Chancletas</h3>
+                    <p class="descripcion">Explora nuestras chancletas cómodas y modernas.</p>
+                </div>
+                <div class="producto-card" onclick="location.href='producto.html#zapatos'">
+                    <img src="img/zapatos.jpg" alt="Zapatos">
+                    <h3>Zapatos</h3>
+                    <p class="descripcion">Descubre los zapatos ideales para cada ocasión.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Síguenos en nuestras redes</h2>
+            <div class="redes">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <div id="carrito-flotante">
+        <i class="fas fa-shopping-cart"></i>
+        <div id="contador-carrito">0</div>
+        <div id="dropdown-carrito"></div>
+    </div>
+
+    <div id="modalLogin" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeLogin">&times;</span>
+        <h2>Iniciar Sesión</h2>
+        <input type="email" id="loginEmail" placeholder="Correo electrónico">
+        <input type="password" id="loginPass" placeholder="Contraseña">
+        <button id="loginSubmit">Iniciar Sesión</button>
+      </div>
+    </div>
+
+    <div id="modalRegistro" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeRegistro">&times;</span>
+        <h2>Registrarse</h2>
+        <input type="text" id="regNombre" placeholder="Nombre completo">
+        <input type="email" id="regEmail" placeholder="Correo electrónico">
+        <input type="text" id="regCelular" placeholder="Número de celular">
+        <input type="password" id="regPass" placeholder="Contraseña">
+        <button id="registroSubmit">Registrarse</button>
+      </div>
+    </div>
+
+    <footer>
+        <p>&copy; Zapatos JF. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

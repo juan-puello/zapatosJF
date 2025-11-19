@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto - Zapatos JF</title>
+    <link rel="stylesheet" href="css/tienda.css">
+    <link rel="stylesheet" href="css/productos.css">
+</head>
+<body>
+
+    <!-- Sección para mostrar productos seleccionados desde el index -->
+    <div class="producto-detalle" id="detalleProducto">
+        <img id="imgProducto" src="" alt="Producto">
+        <h3 id="nombreProducto"></h3>
+        <p id="precioProducto"></p>
+        <p id="descripcionProducto"></p>
+        <button onclick="agregarAlCarrito()">Agregar al carrito</button>
+        <button onclick="window.location.href='index.html'">Volver</button>
+    </div>
+
+    <!-- Sección de Chancletas -->
+    <section id="chancletas" class="categoria">
+        <h2>Chancletas</h2>
+        <div class="productos-grid">
+            <div class="producto-card" onclick="verProducto('Chancleta 1', 'img/chancleta1.jpg', '$50.000', 'Chancleta cómoda y ligera.')">
+                <img src="img/chancleta1.jpg" alt="Chancleta 1">
+                <h3>Crocs Crocband</h3>
+                <p class="precio">$80.000</p>
+                <p class="descripcion">Comodidad ligera y estilo deportivo en cada paso.</p>
+            </div>
+            <div class="producto-card" onclick="verProducto('Chancleta 2', 'img/chancleta2.jpg', '$55.000', 'Chancleta deportiva.')">
+                <img src="img/chancleta2.jpg" alt="Chancleta 2">
+                <h3>Pantuflas</h3>
+                <p class="precio">$55.000</p>
+                <p class="descripcion">Pantuflas de algodón azul turquesa: suaves, cómodas y perfectas para descansar en casa.</p>
+            </div>
+            <div class="producto-card" onclick="verProducto('Chancleta 3', 'img/chancleta3.jpg', '$60.000', 'Chancleta elegante.')">
+                <img src="img/chancleta3.jpg" alt="Chancleta 3">
+                <h3>Sandalias de mujer</h3>
+                <p class="precio">$48.000</p>
+                <p class="descripcion">Sandalias Planas con Moño para Mujer - Olivia Guayaba .</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Zapatos -->
+    <section id="zapatos" class="categoria">
+        <h2>Zapatos</h2>
+        <div class="productos-grid">
+            <div class="producto-card" onclick="verProducto('Sneaker', 'img/tenis1.jpg', '$280.000', 'Tenis deportivo colorido, estilo urbano moderno.')">
+                <img src="img/tenis1.jpg" alt="Zapato Sneaker">
+                <h3>Sneaker</h3>
+                <p class="precio">$280.000</p>
+                <p class="descripcion">Tenis deportivo colorido, estilo urbano moderno.</p>
+            </div>
+            <div class="producto-card" onclick="verProducto('Runner', 'img/tenis2.jpg', '$150.000', 'Ideal para correr o uso casual.')">
+                <img src="img/tenis2.jpg" alt="Tenis Runner">
+                <h3>Runner</h3>
+                <p class="precio">$150.000</p>
+                <p class="descripcion">Ideal para correr o uso casual.</p>
+            </div>
+            <div class="producto-card" onclick="verProducto('Zapato Oxford', 'img/tenis3.jpg', '$260.000', 'Zapatos de vestir clásico.')">
+                <img src="img/tenis3.jpg" alt="Zapato Oxford">
+                <h3>Zapato Oxford</h3>
+                <p class="precio">$260.000</p>
+                <p class="descripcion">Zapatos de vestir clásico.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const hash = window.location.hash.replace('#', '');
+
+            if (hash === 'chancletas') {
+                document.getElementById('chancletas').style.display = 'block';
+                document.getElementById('zapatos').style.display = 'none';
+                document.getElementById('detalleProducto').style.display = 'none';
+            }
+
+            if (hash === 'zapatos') {
+                document.getElementById('zapatos').style.display = 'block';
+                document.getElementById('chancletas').style.display = 'none';
+                document.getElementById('detalleProducto').style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>
